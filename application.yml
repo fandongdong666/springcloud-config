@@ -1,0 +1,15 @@
+server:
+  port: 8001  #服务端口号，建议一定有
+
+spring:
+  application:
+    name: cloud-provider-hystrix-payment #微服务名称，建议有
+
+eureka:
+  client:
+    register-with-eureka: true #false表示不向注册中心注册自己。
+    fetch-registry: true #是否抓取注册信息。
+    service-url:
+      defaultZone: http://eureka7003.com:7003/eureka  #单机版只写自己本身
+      # 集群版  写注册中心所有的  机器地址 （有2个注册中心集群 就写两个地址）
+      #defaultZone: http://eureka7003.com:7003/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
